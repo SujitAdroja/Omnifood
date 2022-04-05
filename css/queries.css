@@ -1,0 +1,279 @@
+/* rem and em do not depend on html font size html meadia queries 1rem =1em=16px */
+
+/***********************/
+/*  BELOW 1344PX (SMALLER COMPUTERES)*/
+/**********************/
+
+
+@media(max-width:81em){
+.hero{ 
+    max-width:120rem ;
+}
+.heading-primary{
+    font-size: 4.4rem;
+}
+.gallery {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+}
+
+/***********************/
+/*  BELOW 1200PX (Landscap Tabley)*/
+/**********************/
+
+
+@media(max-width:75em){
+     html{
+         font-size:56.25%;
+     }
+     .secondary-heading{
+        font-size: 3.6rem;
+    }
+     .tertiary-heading{
+        font-size: 2.4rem;
+    }
+    .header{
+        padding: 0 3.2rem;
+    }
+    .grid{
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+    }
+    .hero{
+    column-gap: 4.8rem;
+    }
+    .testimonials-container {
+        padding: 9.8rem 3.2rem;
+      }
+}
+/***********************/
+/*  BELOW 9444PX (Tablets)*/
+/**********************/
+@media(max-width:59em){
+
+    /* 8px/16px =0.5=50% */
+    html{
+        font-size: 50%;
+    }
+    /* .hero-text-box{
+        grid-column: 1/-1;
+        align-self: center;
+        justify-self: center;
+    } */
+    
+    .hero{
+        grid-template-columns: 1fr;
+        padding: 0 8rem;
+        gap: 6.4rem;
+        
+        
+    }
+    .hero-img{
+        width: 60%;
+    }
+    .hero-text-box,
+    .hero-image-box{
+        text-align: center;
+
+    }
+    .delivered-meals{
+        justify-content: center;
+        margin-top: 3.2rem;
+    }
+    .logos img {
+        height: 2.4rem;
+    }
+    .step-number{
+        font-size: 7.4rem;
+
+    }
+    .meal-content {
+        padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+      }
+    .section-testimonials {
+        
+        grid-template-columns: 1fr;
+        
+    }
+    .gallery {
+    
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.6rem;
+        padding: 1.6rem;
+    }
+    .cta{
+        grid-template-columns: 3fr 2fr;
+    }
+    .cta-form{
+        grid-template-columns: 1fr;
+    }
+    .btn--form{
+        margin-top: 1.2rem;
+    }
+    .btn-mobile-nav{
+        display: block;
+        z-index: 1000;
+    }
+    .main-nav{
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: all 0.5s ease-in-out;
+
+
+
+        /* hide nav */
+        /* allows no transitions */
+        /* display: none; */
+        /* 1) hide visibility */
+        
+        opacity: 0;
+        /* 2) make it unaccessile ti mouse and key board */
+        pointer-events: none;   
+        /* 3) hide it from screen readers */
+        visibility: hidden;
+        
+
+        
+    }
+    .nav-open .main-nav{
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    .nav-open .icon-mobile-nav[name=close-outline]{
+
+        display: block;
+    }
+    .nav-open .icon-mobile-nav[name=menu-outline]{
+
+        display: none;
+    }
+      
+    .main-nav-list{
+       flex-direction: column;
+       gap: 4.8rem;
+    }
+    .main-nav-link:link,
+.main-nav-link:visited {
+    font-size: 3rem;
+}
+}
+/***********************/
+/*  BELOW 704PX (smaller Tablets)*/
+/**********************/
+@media(max-width:44em){
+    .grid--3--cols,.grid--4--cols  {
+        grid-template-columns: repeat(2,1fr);
+        
+      }
+      .diet{
+          grid-column: 1/-1;
+        justify-self:center;
+      }
+      .secondary-heading{
+          margin-bottom: 4.8rem;
+      }
+      .pricing-plan{
+          width: 100%;
+      }
+      .grid--footer{
+        display: grid;
+        grid-template-columns:repeat(6,1fr);
+        
+      }
+      .logo-col,.address-col{
+          grid-column: span 3;
+      }
+      
+      .nav-col{
+        grid-row: 1;
+        grid-column: span 2;
+        margin-bottom: 3.2rem;
+      }
+      
+
+}
+/***********************/
+/*  BELOW 544PX (Mobile-Phones)*/
+/**********************/
+
+ @media(max-width:34em){
+    
+    
+    
+
+    .grid{
+    row-gap: 4.8rem;
+
+    }
+
+    .grid--2--cols,.grid--3--cols,.grid--4--cols  {
+        grid-template-columns: repeat(1,1fr);
+        
+      }
+      .btn,
+.btn:link,
+.btn:visited{
+    padding: 2.4rem 1.2rem;
+}
+    .hero{
+          padding: 0 3.2rem;
+    }
+    .section-hero{
+        padding:2.4rem 0 6.4rem 0;
+
+    }
+     
+    .hero-img{
+        width:80% ;
+    }
+    .logos img{
+        height: 1.2rem;
+    }
+    .step-img-box:nth-child(2){
+        grid-row: 1/2;
+    }
+    .step-img-box:nth-child(6){
+        grid-row:5 ;
+    }
+    .step-img-box{
+        transform: translateY(2.4rem);
+    }
+    .testomonials{
+        grid-template-columns: 1fr;
+    }
+    .gallery{
+        grid-template-columns: repeat(4,1fr);
+        gap: 1.2rem;
+    }
+    .cta{
+        grid-template-columns: 1fr;
+
+    }
+    .cta-img-box{
+        height: 32rem;
+        grid-row: 1;
+    }
+    .cta-text-box{
+        padding: 3.2rem;
+    }
+ }
+
+
+/* =FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+--SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
